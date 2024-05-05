@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valuation Form</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'base.css' %}" /> -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    
+    <script src="{% static 'base.js' %}"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+<script src="https://kit.fontawesome.com/31ae4e2bec.js" crossorigin="anonymous"></script>  
+</head>
+
+  
+  <style>
+
+.huge::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+    /* margin: 1rem; */
+}
+
+.huge::-webkit-scrollbar-track {
+    background-color: rgb(128, 128, 128);
+}
+
+.huge::-webkit-scrollbar-thumb {
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    background-color: #6724cc91;
+    border-radius: 1rem;
+    height:10px;
+    width:10px;
+}
+
+.huge::-webkit-scrollbar-thumb:hover{
+  background-color:#6824cc ;
+
+}
+
+.prov_table::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+    /* margin: 1rem; */
+}
+
+.prov_table::-webkit-scrollbar-track {
+    background-color: rgb(128, 128, 128);
+}
+
+.prov_table::-webkit-scrollbar-thumb {
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    background-color: #6724cc91;
+    border-radius: 1rem;
+    height:10px;
+    width:10px;
+}
+
+.prov_table::-webkit-scrollbar-thumb:hover{
+  background-color:#6824cc ;
+
+}
+body{
+  overflow-x:hidden;
+}
+
+
+.first-page{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight:600;
+  
+}
+.first-page h6{
+ 
+  font-family: 'Poppins', sans-serif;
+  font-weight:600;
+  margin-top:2rem;
+  
+}
+
+.first-page-input{
+  display:flex;
+  justify-content: center;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  
+ 
+}
+
+.first-page-divicons{
+  display:flex;
+  background-color: white; 
+  border-radius:0.5rem;
+  margin-right:2rem;
+}
+
+.first-page-icons{
+  height:100%;
+  display:flex;
+  margin-left:1rem;
+}
+
+.first-page-icons i{
+  margin:auto;
+}
+
+
+.first-page  input{
+  width:350px;
+  height:40px;
+  border-radius: 0.5rem;
+ 
+  border:none;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight:300;
+  background-color: white;
+  border:2px solid #10042c
+  back
+}
+
+
+  .fourth {
+  border:2px solid #10042c;
+  margin-top:2rem;
+  width:200px;
+  border-radius: 1rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  height:50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight:600;  
+  background-image: linear-gradient(45deg, #10042c 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: 300ms ease-in-out;
+}
+.fourth:hover {
+  background-position: 0;
+  color:white;
+
+}
+
+  
+.hide{
+ display:none;
+ /* visibility:hidden */
+}
+.fieldset_content{
+  display:flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  /* margin:auto; */
+
+
+  height:90%;
+
+}
+.fieldset_arrows{
+  display:flex;
+  justify-content: center;
+  margin:auto;
+ 
+
+}
+
+.accordion{
+  width:80%;
+}
+
+.val1_half{
+  margin-left:2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight:600;
+    font-size:14px;
+    /* display:flex;
+    flex-direction: column; */
+}
+.coe_table{
+  /* border: 2px solid black; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius:1rem;
+  padding-top:1rem;
+  /* background-color: #32325d; */
+  background-color: #e0dcf4;
+  color:black;
+  padding-bottom: 2rem;
+  /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+  text-align: left;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  border:3px solid #32325d
+
+}
+.coe_table label{
+  margin-left:2rem;
+  width:200px;
+}
+.coe_table input{
+  margin-right: 2rem;
+  text-align: center;
+  color:black;
+  width:180px;
+  border:none;
+  background-color: rgba(255, 255, 255, 0);
+  /* font-weight: bolder; */
+   border:2px solid #1ECD97;
+  border-radius:5px; 
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+
+}
+.coe_table input:focus{
+ padding:2px;
+ background-color: #1ecd969c;
+ 
+  /* width:180px; */
+ 
+}
+
+
+.coe_table input:hover{
+/* border:2px solid #10042c; */
+/* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); */
+background-color: #1ECD97;
+}
+
+.footer{
+  margin-top: 2rem;
+}
+
+.fieldset_content_result{
+  display:flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  /* margin:auto; */
+  width:1100px;
+  margin:auto;
+
+  height:90%;
+
+}
+
+.result-endboxes{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+
+
+
+.fieldset_content_result h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+
+}
+
+
+
+.center_text{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  border:none;
+  font-size: 32px;
+  color:cornflowerblue;
+  
+
+  
+}
+
+.cards-header{
+ 
+  background-color: #0f042f;
+  border-radius: 2rem;
+  
+}
+
+.glow{
+  /* text-shadow: 0px 0px 6px rgba(255,255,255,0.7); */
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+               0px -5px 35px rgba(255,255,255,0.3);
+}
+.valuation_result_outter{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:300px;
+  font-family: 'Poppins', sans-serif;
+  font-weight:700;
+  height:300px;
+  margin:auto;
+  transition:all 0.3s;
+}
+.valuation_result_outter:hover{
+transform: translateY(-0.25em);
+  border-color: #5e5e5e;
+  color: #5e5e5e;
+}
+.valuation_result_outter:hover::before {
+  opacity: 1;
+}
+.valuation_result_outter::before {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  left: 0;
+  bottom: -1.35em;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  opacity: 0;
+  transition: all 0.65s;
+  content: "";
+}
+
+
+.valuation_result{  
+  border: 3px solid black;
+  height:400px;
+  width:400px;
+  border-radius: 50%;
+  margin:auto;
+ display: flex;
+ justify-content: center;
+  /* box-shadow: 0 4px 2px 2px rgba(36, 69, 218, 0.2); */
+}
+
+.result_icons{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  /* background-color: #1ecd966c; */
+  background-color:#e0dcf4;
+  margin:auto;
+  display:flex;
+  align-items: center;
+
+  transition:0.5s;
+}
+
+.result_icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  /* background-color: #1ecd966c; */
+  background-color:#e0dcf4;
+  margin:auto;
+  display:flex;
+  align-items: center;
+
+  transition:0.5s;
+}
+
+.result_icons i{
+  margin-left:1rem;
+  color: #32325d;
+
+
+}
+.result_icon i{
+  margin-left:1.2rem;
+  color: #32325d;
+
+
+}
+
+.result_icons:hover{
+  background-color:plum ;
+  
+}
+
+.result_icon:hover{
+  background-color:plum ;
+  
+}
+
+ th, td {
+  /* border-bottom: 1px solid black;*/
+  /* border-collapse: separate;  */
+
+  /* height:100%; */
+  background-color: #6CDAEE;
+  
+  
+  /* margin:10px; */
+  
+}
+
+
+.huge{
+  display:block;
+  border:none;
+  height:50vh;
+  overflow-y:scroll;
+  width:100%;
+  overflow-x:scroll; 
+  margin-top:0.5rem;
+  border-radius:1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  
+
+
+}
+.prov_table{
+  display:block;
+  border:none;
+
+  height:108%;
+  overflow-y:scroll;
+  color:black;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius:1rem;
+ 
+  /* border-radius: 1rem; */
+  
+
+
+}
+
+.grids{
+  /* margin-bottom:0px; */
+  margin-top:1.5rem;
+  text-align: center;
+  width:90%;
+  height:30px;
+  border-radius: 5px;
+  border:2px solid #1ECD97;
+  background-color: rgba(255, 255, 255, 0);
+  /* border:2px solid cadetblue; */
+  /* background-color: aquamarine; */
+  /* background-color: #E85A4F; */
+}
+.grids:focus{
+  background-color: #1ecd9696;
+  padding-right:2px;
+}
+
+.grids:hover{
+/* border:2px solid #10042c; */
+/* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); */
+background-color: #1ECD97;
+}
+.grid-out{
+  
+  width:200px;  
+  
+}
+.grid-out-out{
+ 
+
+  margin-top:20px;
+  width:100%;
+  margin-left:1rem;
+  margin-right: 1rem; 
+  /* margin-bottom: 1rem;; */
+  text-align: left;
+  
+}
+.grid-out-prov{
+  /* margin-top:5%; */
+  margin-left:2rem;
+  width:5px;
+ 
+}
+
+
+.prov_table_area{
+  display:flex;
+  justify-content: space-between;
+}
+
+.prov_table_area h5{
+  background-color: rgba(255, 255, 255, 0.473);
+
+  margin-bottom: 0px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius:1rem;
+}
+inpu{
+  border:none;
+ 
+}
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+#grad1 {
+  height:110vh;
+  width:100vw;
+  background-color: rgba(136, 132, 132, 0);
+    background-image: url("https://wallpaperaccess.com/full/2014748.jpg");
+    /* background: #29baba; */
+    /* background-color: #1ba39c ;
+   
+    background-image: linear-gradient(120deg, cadetblue,#c8f7c5 ) */
+}
+
+
+
+
+
+
+.circle {
+    border: 2px solid red;
+    background-color: #FFFFFF;
+    height: 100px;
+    border-radius:50%;
+    width: 100px;
+}
+
+/* .Computers{
+  bgcolor: cornflowerblue;
+} */
+#progressbar .active {
+    color: #000000
+}
+
+.receive_otp{
+background-color: #3AAFA9;
+text-align: center;
+width:13%;
+height:40px;
+border:none;
+}
+
+.receive_otp:hover{
+  color:white;
+  background-color: #17352A;
+}
+
+
+.modal-body{
+
+  display: flex;
+  flex-direction:column;
+  background-color: #10042c00;
+  /* align-items: center; */
+
+}
+
+.modal-body label{
+  /* background-color: #FF4081; */
+  width: 50%;
+  /* margin-right:0.5rem; */
+}
+
+.modal-body input{
+  border: 1px solid black;
+  background-color: aliceblue;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#msform fieldset .form-card {
+    background: #EAE7DC;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0.2px 0.2px 2.2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    height:50vh;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    background:     #d0d4dc00;
+
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    height:72vh;
+    /* padding-bottom: 20px; */
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #6CDAEE
+}
+
+
+.otp_input{
+  padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: #EAE7DC;
+
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    /* border-bottom: 2px solid skyblue; */
+    outline-width: 0
+}
+
+
+
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+    width:1500px;
+    height:90vh;
+    /* background-color:slateblue */
+    background-color: #10042c00;
+    /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+    /* background-color: #17352A; */
+
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    width:100%;
+    margin-bottom: 30px;
+    margin-left:10%;
+    overflow: hidden;
+    color: lightgrey
+}
+
+
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 20%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #10042c;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    color:white;
+    background: #3B945E;
+    /* background: orangered; */
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.phonenumber{
+    display:flex;
+    border:none
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.arrow {
+  --active: #10042c;
+  --border:#10042c;
+  display: block;
+  position: relative;
+  width: 44px;
+  height: 44px;
+
+  
+}
+.arrow.left {
+  transform: scaleX(-1);
+}
+.arrow i {
+  display: block;
+  position: absolute;
+  margin: -10px 0 0 -10px;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+ 
+}
+.arrow i:before, .arrow i:after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: var(--active);
+  margin: -1px 0 0 -5px;
+  display: block;
+  transform-origin: 9px 50%;
+}
+.arrow i:before {
+  transform: rotate(-40deg);
+}
+.arrow i:after {
+  transform: rotate(40deg);
+}
+.arrow:before, .arrow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+.arrow svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  color: var(--active);
+  stroke-width: 2px;
+  stroke-dashoffset: 126;
+  stroke-dasharray: 126 126 0;
+  transform: rotate(0deg);
+
+}
+.arrow.animate svg {
+  -webkit-animation: stroke 0.1s ease forwards 0.3s;
+          animation: stroke 0.1s ease forwards 0.3s;
+}
+.arrow.animate i {
+  -webkit-animation: arrow 0.6s ease forwards;
+          animation: arrow 0.6s ease forwards;
+}
+.arrow.animate i:before {
+  -webkit-animation: arrowUp 0.6s ease forwards;
+          animation: arrowUp 0.6s ease forwards;
+}
+.arrow.animate i:after {
+  -webkit-animation: arrowDown 0.6s ease forwards;
+          animation: arrowDown 0.6s ease forwards;
+}
+
+@-webkit-keyframes stroke {
+  52% {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 0;
+  }
+  52.1% {
+    transform: rotate(-360deg);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 126;
+  }
+}
+
+@keyframes stroke {
+  52% {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 0;
+  }
+  52.1% {
+    transform: rotate(-360deg);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 126;
+  }
+}
+@-webkit-keyframes arrow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  23% {
+    transform: translateX(17px);
+    opacity: 1;
+  }
+  24%, 80% {
+    transform: translateX(-22px);
+    opacity: 0;
+  }
+  81% {
+    opacity: 1;
+    transform: translateX(-22px);
+  }
+}
+@keyframes arrow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  23% {
+    transform: translateX(17px);
+    opacity: 1;
+  }
+  24%, 80% {
+    transform: translateX(-22px);
+    opacity: 0;
+  }
+  81% {
+    opacity: 1;
+    transform: translateX(-22px);
+  }
+}
+@-webkit-keyframes arrowUp {
+  0%, 100% {
+    transform: rotate(-40deg) scaleX(1);
+  }
+  20%, 80% {
+    transform: rotate(0deg) scaleX(0.1);
+  }
+}
+@keyframes arrowUp {
+  0%, 100% {
+    transform: rotate(-40deg) scaleX(1);
+  }
+  20%, 80% {
+    transform: rotate(0deg) scaleX(0.1);
+  }
+}
+@-webkit-keyframes arrowDown {
+  0%, 100% {
+    transform: rotate(40deg) scaleX(1);
+  }
+  20%, 80% {
+    transform: rotate(0deg) scaleX(0.1);
+  }
+}
+@keyframes arrowDown {
+  0%, 100% {
+    transform: rotate(40deg) scaleX(1);
+  }
+  20%, 80% {
+    transform: rotate(0deg) scaleX(0.1);
+  }
+}
+
+
+
+.noselect {
+	width: 200px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background:#c0dcf500;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #c0dcf500;
+  margin-left:990px;
+  border:2px solid black;
+  margin-bottom:0.5rem;
+
+}
+
+.noselect, .noselect span {
+	transition: 200ms;
+}
+
+.noselect .text {
+	transform: translateX(35px);
+	color: #10042c;
+	font-weight: bold;
+}
+
+.noselect .icon {
+	position: absolute;
+	border-left: 1px solid #10042c;
+	transform: translateX(110px);
+	height: 40px;
+  margin-left:3rem;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.noselect svg {
+	width: 15px;
+	fill: #10042c
+}
+
+.noselect:hover {
+	background: #c0dcf5;
+}
+
+.noselect:hover .text {
+	color: transparent;
+}
+
+.noselect:hover .icon {
+	width: 200px;
+  margin-left:0px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.noselect:focus {
+	outline: none;
+}
+
+.position-left-2{
+  position:relative;
+  left:20px;
+  bottom:260px;
+
+}
+.position-right-2{
+  position:relative;
+  left:1400px;
+  bottom:297px;
+  
+}
+
+.position-left-3{
+  position:relative;
+  left:55px;
+  bottom:260px;
+
+}
+.position-right-3{
+  position:relative;
+  left:1400px;
+  bottom:300px;
+  
+  
+} 
+/* .position-left-1{
+  position:relative;
+  left:500px;
+  top:60px ;
+
+}
+.position-right-1{
+  position:relative;
+  left:1250px;
+  bottom:180px;
+  
+}
+.position-left-2{
+  position:relative;
+  right:90px;
+  bottom:260px;
+
+}
+.position-right-2{
+  position:relative;
+  left:1250px;
+  bottom:345px;
+  
+}
+.position-left-3{
+  position:relative;
+  right:87px;
+  bottom:273px;
+
+}
+.position-right-3{
+  position:relative;
+  left:1260px;
+  bottom:350px;
+  visibility:hidden;
+  
+} */
+
+
+.form-control {
+      border: 0;
+      border-bottom: 1px solid #a1a7ac;
+      border-radius: 0;
+      display: inline-block;
+      width: 30px;
+      font-size: 30px;
+      color: #5f6771;
+      padding: 0;
+      margin-right: 7px;
+      text-align: center;
+      line-height: 1;
+    }
+
+   .form-control {
+      border-radius: 3px;
+      border: 1px solid #d8e1e7;
+      padding: 0 20px;
+      height: auto;
+      font: 400 15px/48px "Roboto", sans-serif;
+      color: #5f6771;
+      box-shadow: none;
+      outline: none;
+      width: 100%;
+    }
+    
+    .multi_step_form #msform fieldset .code_group {
+      margin-bottom: 60px;
+    }
+    .code_group{
+      border: 0;
+      border-bottom: 1px solid #a1a7ac;
+      border-radius: 0;
+      display: inline-block;
+      width: 120px;
+      font-size: 30px;
+      color: #5f6771;
+      padding: 0;
+      margin-right: 7px;
+      text-align: center;
+      line-height: 1;
+      /* visibility:hidden; */
+      display:none;
+    }
+    .form-group {
+      display:block;
+      justify-content: center;
+      align-items: center;
+    }
+
+   .done_text {
+      padding-top: 40px;
+      /* visibility:hidden; */
+      display:none;
+    }
+     .done_text .don_icon {
+      height: 36px;
+      width: 36px;
+      line-height: 36px;
+      font-size: 22px;
+      margin-bottom: 10px;
+      background: #2b3044;
+      display: inline-block;
+      border-radius: 50%;
+      color: #ffffff;
+      text-align: center;
+      
+    }
+     .done_text h6 {
+      line-height: 23px;
+    }
+
+    .no-button{
+      /* visibility:hidden; */
+      display:none;
+    }
+    .button-hold {
+  --color: #f6f8ff;
+  --background: #2b3044;
+  --icon: var(--color);
+  --progress-border: #646b8c;
+  --progress-active: #fff;
+  --progress-success: #5c86ff;
+  --tick-stroke: var(--progress-active);
+  --shadow: rgba(0, 9, 61, 0.2);
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  min-width: 112px;
+  padding: 12px 20px 12px 12px;
+  border: 0;
+  border-radius: 24px;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-appearance: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 var(--shadow-y, 4px) var(--shadow-blur, 12px) var(--shadow);
+  transform: scale(var(--scale, 1)) translateZ(0);
+  color: var(--color);
+  background: var(--background);
+}
+.button-hold > div {
+  margin-right: 4px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  background: var(--progress-border);
+}
+.button-hold > div:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  z-index: 1;
+  position: absolute;
+  background: var(--background);
+  border-radius: inherit;
+  transform: scale(var(--background-scale, 1));
+  transition: transform 0.32s ease;
+}
+.button-hold > div svg {
+  display: block;
+}
+.button-hold > div svg.icon, .button-hold > div svg.tick {
+  position: absolute;
+}
+.button-hold > div svg.icon {
+  width: 8px;
+  height: 8px;
+  left: 6px;
+  top: 6px;
+  fill: var(--icon);
+  z-index: 1;
+  transition: opacity 0.2s, transform 0.2s;
+  opacity: var(--icon-opacity, 1);
+  transform: translateY(var(--icon-y, 0)) scale(var(--icon-scale, 1));
+}
+.button-hold > div svg.progress, .button-hold > div svg.tick {
+  fill: none;
+}
+.button-hold > div svg.progress {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg) scale(var(--progress-scale, 1));
+  transition: transform 0.5s ease;
+}
+.button-hold > div svg.progress circle {
+  stroke-dashoffset: 1;
+  stroke-dasharray: var(--progress-array, 0) 52;
+  stroke-width: 16;
+  stroke: var(--progress-active);
+  transition: stroke-dasharray var(--duration) linear;
+}
+.button-hold > div svg.tick {
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--tick-stroke);
+  transition: stroke 0.3s ease 0.7s;
+}
+.button-hold > div svg.tick polyline {
+  stroke-dasharray: 18 18 18;
+  stroke-dashoffset: var(--tick-offset, 18);
+  transition: stroke-dashoffset 0.4s ease 0.7s;
+}
+.button-hold:focus:not(.process), .button-hold:hover:not(.process) {
+  --shadow-y: 8px;
+  --shadow-blur: 16px;
+}
+.button-hold:active:not(.success) {
+  --scale: 0.96;
+  --shadow-y: 4px;
+  --shadow-blur: 8px;
+}
+.button-hold.process, .button-hold.success {
+  --progress-array: 52;
+  --icon-y: -4px;
+  --icon-scale: 0.6;
+  --icon-opacity: 0;
+}
+.button-hold.success {
+  --progress-border: none;
+  --progress-scale: 0.11;
+  --tick-stroke: var(--progress-success);
+  --background-scale: 0;
+  --tick-offset: 36;
+}
+.button-hold.success > div svg.progress {
+  -webkit-animation: tick 0.3s linear forwards 0.4s;
+          animation: tick 0.3s linear forwards 0.4s;
+}
+.form-row{
+        position: relative;
+        left:280px
+    }
+
+    .btnn {
+  background: transparent;
+  /* position:relative;
+  bottom:30px;
+  width: 200px;
+  position: relative; */
+  /* padding: 15px; */
+  color: #1ECD97;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  border-radius: 4px;
+  font-weight: 600;
+  overflow: hidden;
+  border: 2px solid #1ECD97;
+  text-decoration: none;
+  margin-top:2rem;
+}
+
+/* In Progress Button */
+.btnn-progress {
+  width: 500px;
+  color: transparent;
+}
+
+.btnn-fill:after {
+  content: '';
+  background: #1ECD97;
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0;
+  display: block;
+  animation: fill 3.2s linear forwards;
+}
+
+/* Button Complete */
+.btnn-complete {
+  /* padding: 10px; */
+  width: 50px;
+  height:50px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.btnn-complete:after {
+  font-family: FontAwesome;
+  content: "\f00c";
+  color: #fff;
+  height: 100%;
+  padding-left: 3px;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1ECD97;
+}
+
+/* Animation */
+@keyframes fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+
+  
+ .final-page {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-family: muli,sans-serif;
+    font-weight: 400;
+    color: rgba(0,0,0,0.87);
+    -webkit-box-direction: normal;
+    /* margin: 8px; */
+    font-size: 12px;
+    line-height: 19px;
+    background: #fff;
+    /* z-index: 2; */
+    position: relative;
+    left: 300px;
+    padding: 42px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 35px 0 rgba(227,227,227,.5);
+    max-width: 45%;
+    max-height: 100%;
+    -webkit-box-flex: 1;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+ }
+ 
+.mover{
+  position: relative;
+  left: 190px;
+}
+
+.range {
+  border-radius: 50%;
+  display: table;
+  height: 186px;
+  position: relative;
+  width: 186px;
+  /* box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2); */
+
+}
+.range input {
+  opacity: 0;
+  position: absolute;
+}
+.range .dial {
+  background-color: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 26px;
+  margin-left: -13px;
+  position: absolute;
+  top: -13px;
+  transform: translateX(93px) translateY(5px);
+  width: 26px;
+  z-index: 40;
+}
+.range .dial:focus {
+  outline: 0;
+}
+.range .info {
+  background-color: #FFF;
+  border-radius: 50%;
+  bottom: 10px;
+  color: #333;
+  cursor: default;
+  display: table-cell;
+  font: 400 16px/1.1 "Roboto", sans-serif;
+  left: 10px;
+  padding-top: 22%;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  z-index: 30;
+}
+.range .count {
+  color: #32325d;
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.slice {
+  border-radius: 186px 0 0 186px;
+  background-color: #32325d;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 50%;
+  z-index: 10;
+}
+.slice.right {
+  border-radius: 0 186px 186px 0;
+  right: 0;
+}
+.slice.right .blocker {
+  left: 0;
+  right: auto;
+  transform-origin: 0 25%;
+}
+.slice .blocker {
+  background-color: #eee;
+  height: 200%;
+  position: absolute;
+  right: 0;
+  transform-origin: 100% 25%;
+  width: 200%;
+}
+
+.btnnn {
+  background-color:#01d9b15e;
+
+  border: 3px solid white;
+
+  /* box-shadow: 0 0 0 3px transparent; */
+  color: #FDFEFE;
+  display: block;
+  width:20%;
+  cursor: pointer;
+  padding: 0.8em 2.4em;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* font-size: 1.8em;
+  font-weight: 500; */
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+  margin:auto;
+  z-index: 2;
+}
+.btnnn:hover{
+  border: 3px solid green;
+ 
+
+}
+.btnnn:active {
+  box-shadow: 0 0 0 3px #3AFEDB;
+}
+.btnnn.is-loading:before {
+  transform: translateX(0%);
+}
+.btnnn.is-loading .btn-icon {
+  -webkit-animation: checkmark cubic-bezier(0.38, 0.47, 0.07, 0.89) 1s 1.2s forwards;
+          animation: checkmark cubic-bezier(0.38, 0.47, 0.07, 0.89) 1s 1.2s forwards;
+}
+.btnnn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #01d9b2;
+  transform: translateX(-100%);
+  transition: 1.2s transform cubic-bezier(0.38, 0.47, 0.07, 0.89);
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    transform: translateY(-50%) scale(0);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.15);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    transform: translateY(-50%) scale(0);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.15);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+.btn-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.7em;
+  transform: translateY(-50%) scale(0);
+}
+ </style>
+
+
+  <body oncontextmenu="return false" class="snippet-body ">
+    <!-- MultiStep Form -->
+    <div class="container-fluid" id="grad1">
+      <div class="row justify-content-center mt-0">
+       
+        <div
+        class=" text-center p-0 mt-3 mb-2"
+        >
+        
+          <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+           
+            <div class="row">
+              <div class="col-md-12 mx-0">
+                <form id="msform">
+                  <!-- progressbar -->
+                  <ul id="progressbar">
+                    <li class="active" id="account" style="color: #10042c;">
+                      <strong>Verification</strong>
+                    </li>
+                    <li id="payment" style="color: #10042c;"><strong>Valuation 1</strong></li>
+                    <li id="payment" style="color: #10042c;"><strong>Valuation 2</strong></li>
+                    <li id="confirm" style="color: #10042c;"><strong>Result</strong></li>
+                  </ul>
+                  <fieldset>
+                    <!-- <i class="fa-solid fa-address-card"></i>
+                    <i class="fa-solid fa-at"></i> -->
+                    <div class="first-page" >
+                      <div><h1 style="font-family: 'Poppins', sans-serif;font-weight:600;">Enter Your Details</h1></div>
+                      <div class="first-page-input" ><div class="first-page-divicons"><div class="first-page-icons"><i class="fa-solid fa-user"></i></div><div><input  type="text" id="name"placeholder=" Enter your name" /></div></div>
+                      <div class="first-page-divicons"><div class="first-page-icons"><i class="fa-solid fa-envelope"></i></div><div><input type="email" id="email" placeholder="Enter your email" /></div></div></div>
+                      <div><h6 >We will send you a SMS to verify.</h6></div>
+                      <div class="first-page-input">
+                        <div><input style="width:80px; margin-right:2rem;" value="+91" type="text" id="phone_code" name="phone_code" readonly /></div>
+                        <div class="first-page-divicons"><div class="first-page-icons"><i class="fa-solid fa-phone"></i></div><div><input type="tel" id="phone" placeholder="Enter your number" /></div></div>
+                        <div>  <button type="button" class="button-hold form-control" onClick="send_otp()">
+                          <div>
+                              <svg class="icon" viewBox="0 0 16 16">
+                                  <polygon points="1.3,6.7 2.7,8.1 7,3.8 7,16 9,16 9,3.8 13.3,8.1 14.7,6.7 8,0"></polygon>
+                              </svg>
+                              <svg class="progress" viewBox="0 0 32 32">
+                                  <circle r="8" cx="16" cy="16" />
+                              </svg>
+                              <svg class="tick" viewBox="0 0 24 24">
+                                  <polyline points="18,7 11,16 6,12" />
+                              </svg>
+                          </div>
+                          Receive OTP
+                      </button></div> 
+                      </div>
+                     
+                      <div class="hide" id="hidee" style="margin-top:4rem;"><h6> A secret code is sent to your phone. Please enter it here.</h6></div>
+                      <div class="first-page-input hide" id="hide">
+                      <div><input type="text" style="width:150px;margin-right:2rem;" id="otp"  placeholder="000000" /></div>
+                      <div>  <button type="button" class="button-hold form-control" id="confirm_otp">
+                        <div>
+                            <svg class="icon" viewBox="0 0 16 16">
+                                <polygon points="1.3,6.7 2.7,8.1 7,3.8 7,16 9,16 9,3.8 13.3,8.1 14.7,6.7 8,0"></polygon>
+                            </svg>
+                            <svg class="progress" viewBox="0 0 32 32">
+                                <circle r="8" cx="16" cy="16" />
+                            </svg>
+                            <svg class="tick" viewBox="0 0 24 24">
+                                <polyline points="18,7 11,16 6,12" />
+                            </svg>
+                        </div>
+                        Confirm OTP
+                    </button></div>
+                      </div>
+                      <input type="hidden" id="sent_otp" />
+                    
+                      
+                    </div>
+                    <button type="button" class="next action-button fourth">Continue</button>
+                   
+                  
+                    <!-- <h3 style="margin-top: 20px; margin-bottom: 20px;">Enter Your Details</h3>
+                    <div class="form-row mover" >
+                      <div class=" col-md-4">
+                        <input
+                          type="text"
+                          id="name"
+                          class="form-control"
+                          placeholder="Name"
+                        />
+                      </div>
+                 
+                      <div class="form-group col-md-4">
+                        <input
+                          type="email"
+                          id="email"
+                          class="form-control"
+                          placeholder="Email Address"
+                        />
+                      </div>
+                    </div>
+                    <h6 style="margin-top: 10px; margin-bottom: 10px;">We will send you a SMS to verify.</h6>
+                    <div class="form-row" >
+                      <div class="form-group col-md-1">
+                        <input  class="form-control" type="text" id="phone_code" name="phone_code" value="+91" readonly/>
+                        </div>
+                        <div class="form-group col-md-4">
+                        <input
+                          type="tel"
+                          id="phone"
+                          class="form-control"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                      <div class="form-group col-md-2">
+                        <button type="button" class="button-hold form-control" onClick="send_otp()">
+                          <div>
+                              <svg class="icon" viewBox="0 0 16 16">
+                                  <polygon points="1.3,6.7 2.7,8.1 7,3.8 7,16 9,16 9,3.8 13.3,8.1 14.7,6.7 8,0"></polygon>
+                              </svg>
+                              <svg class="progress" viewBox="0 0 32 32">
+                                  <circle r="8" cx="16" cy="16" />
+                              </svg>
+                              <svg class="tick" viewBox="0 0 24 24">
+                                  <polyline points="18,7 11,16 6,12" />
+                              </svg>
+                          </div>
+                          Receive OTP
+                      </button>
+                      
+              
+                      </div> 
+                    </div>
+                    <div class="form-row" >
+                      
+                    
+                    </div>
+                   
+                    <div  class="done_text" id="done_text" style="margin-top: -20px;">
+                      
+                      <a href="#" class="don_icon"><i class="fa fa-check" aria-hidden="true"></i></a>
+                      <h6>
+                        A secret code is sent to your phone. <br />Please enter it here.
+                      </h6>
+                    </div>
+               
+                    <div class="code_group" id="code_group">
+                      <input type="text" id="otp" class="form-control" placeholder="000000" />
+                    </div>
+                
+                    <button type="button"  class="button-hold no-button" id="confirm_otp">
+                      <div>
+                          <svg class="icon" viewBox="0 0 16 16">
+                              <polygon points="1.3,6.7 2.7,8.1 7,3.8 7,16 9,16 9,3.8 13.3,8.1 14.7,6.7 8,0"></polygon>
+                          </svg>
+                          <svg class="progress" viewBox="0 0 32 32">
+                              <circle r="8" cx="16" cy="16" />
+                          </svg>
+                          <svg class="tick" viewBox="0 0 24 24">
+                              <polyline points="18,7 11,16 6,12" />
+                          </svg>
+                      </div>
+                      Confirm OTP
+                  </button>
+                
+                  <input type="hidden" id="sent_otp" />
+              
+                      <a  class="arrow next action-button position-right-1">
+                      <i></i>
+                      <svg>
+                          <use xlink:href="#circle">
+                      </svg>
+                    
+                  </a>
+                   
+                    <button type="button" class="next action-button">Continue</button>  -->
+                  </fieldset>
+                  
+                  <fieldset>       
+                                           
+                    <div class="fieldset_content">
+                    <div class="fieldset_arrows" style="visibility:hidden">
+                      <a href="" class="arrow left ">
+                        <i></i>
+                        <svg>
+                            <use xlink:href="#circle">
+                        </svg>
+                    </a>
+                    </div>
+                    <div class="prov_table_area">
+                      <div>
+                        <h5>Provisional Table</h5>
+                    <table class="prov_table"> 
+                      <tr >
+                        <th style="height:100px ;background-color: #32325d;width:250px;color:turquoise;">PROVISIONAL VALUES</th>
+                        <th style="width:250px; background-color: #32325d" ><input type="date" id="date" style="border-radius: 1rem;border:2px solid teal;padding-left:1rem"/></th>
+                      </tr>
+                      {% for k in prov_rows %}
+                      <tr>
+                        <td style="background-color:#e0dcf4;text-align:left;"><i class="fa fa-info-circle" style="margin-left:1rem;margin-right:0.5rem;" aria-hidden="true" data-toggle="modal" data-target="#info" ></i>{{k}}</td>
+                        <td style="background-color: #e0dcf4;"><div class="grid-out_prov" style="margin-bottom:0.5rem;margin-top: 0.5rem;" ><input id="provisional_{{k}}" class="grids" style="margin:0px;"   type="number" value=0></div></td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                    </div>
+                    <div class="val1_half">
+                      <h5>Cost of Equity</h5>
+                      <div class="coe_table">
+                      <div>
+                      <label for="industry_type">Industry</label>
+                      <select  class="form-control selectpicker" style="overflow: scroll;width:180px;height:25px; border:2px solid #1ECD97;
+                      border-radius:5px;background-color: rgba(255, 255, 255, 0); " id="industry_type"
+                        name="industry_type" >
+                        {% for i in ind %}
+                        <option value={{i.id}}>{{i.industry}}</option>
+                        {% endfor %}
+                        
+                        </select>
+                      </div>
+                      <div>
+                        
+                        <label for="risk_free_rate">Risk Free Rate (%)</label>
+                        <input id="risk_free_rate"  type="number" value=6.5 />
+                            </div>
+                            <div>
+                        
+                              <label for="market_premium">Market Premium (%)</label>
+                              <input id="market_premium"  type="number" value=7.5 />
+                                  </div>
+                      
+                      <div>
+                        
+                    <label for="cost_of_debt">Cost of Debt</label>
+                    <input id="cost_of_debt" type="number" value=0 />
+                        </div>
+                      <div>
+                    
+                        
+                    <label for="Target_Debt_as_total_capitalisation">Target Debt as total capitalisation</label>
+                    <input id="Target_Debt_as_total_capitalisation"  type="number" value=0 />
+                        </div>
+                        <div>
+                        
+                          <label for="no_of_equity_shares">Number of equity shares</label>
+                          <input id="no_of_equity_shares"  type="number" value=0 />
+                              </div>
+                              <div>
+                                <label for="risk_premium">Risk Premium(%)</label>
+                                <input id="risk_premium" type="range" min="0" max="20" value="15"  style="width:150px;margin-right:8px;"/>
+                          <input id="risk_premium_value" value="15" style="width:20px;" />
+                                <!-- <input id="risk_premium" type="number" /> -->
+                                    </div>
+                              <div>
+                          <label for="growth_rate">Growth Rate</label>
+                          <input id="growth_rate" type="range" min="0" max="10" value="5"  style="width:150px;margin-right:8px"/>
+                          <input id="growth_rate_value" value="5" style="width:20px;" />
+                              </div>
+                              </div>
+                              <h5>Additional Information</h5>
+                          <div class="coe_table">
+                            <div>
+                           <label for="Market_value_invetment">Market Value Investment</label>
+                            <input id="Market_value_invetment" type="number" value=0 />
+                            </div> 
+                            <div>  
+                            
+                                  <label for="Contigent_liability">Contigent Liability</label>
+                                  <input id="Contigent_liability" type="number" value=0 />
+                              </div>     
+                          </div>
+                  </div>
+                    </div>
+                    <div class="fieldset_arrows" style="visibility:hidden">
+                      <a  class="arrow next action-button">
+                        <i></i>
+                        <svg>
+                            <use xlink:href="#circle">
+                        </svg>
+                      
+                    </a>
+                    </div>
+                    </div>
+                    
+                
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                      COE
+                    </button> -->
+                    <a  class="arrow left previous action-button-previous position-left-2">
+                      <i></i>
+                      <svg>
+                          <use xlink:href="#circle">
+                      </svg>
+                  </a> 
+                    
+                  
+                  <a  class="arrow next action-button position-right-2">
+                    <i></i>
+                    <svg>
+                        <use xlink:href="#circle">
+                    </svg>
+                  
+                </a>
+                  
+                  </fieldset>
+                  
+                  
+                  
+                  <fieldset>
+                    <div class="fieldset_content" >
+                      <div class="fieldset_arrows" style="visibility:hidden">
+                        <a  class="arrow left previous action-button-previous ">
+                          <i></i>
+                          <svg>
+                              <use xlink:href="#circle">
+                          </svg>
+                      </a> 
+                      </div>
+                    <div id="accordion" class="accordion">
+                    <input type="hidden" id="lastyear" class="lastyear" value={{last_year}} />
+                    <input type="hidden" id="columns" class="columns" value=0 />
+                    <input type="hidden" id="firstyear" class="firstyear" value={{first_year}} />
+                    <input type="hidden" id="provisional_year" class="provisional_year" value={{provisional_year}} />
+                    <input type="hidden" id="provisional_months_left" class="provisional_months_left" value={{provisional_months_left}} />
+                    <input type="hidden" id="provisional_days_left" class="provisional_days_left" value={{provisional_days_left}} />
+                    <input type="hidden" id="final_id" class="final_id" value=0 />
+                    <!-- <div style="margin-top:0.5rem; margin-left:3rem;margin-right:3rem;" class="cards"> -->
+                      <button type="button" class="noselect" onClick="addcolumn()"><span class='text'>Add Year</span><span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+                      
+                      <div  class="cards-header" id="headingOne">
+
+                        <h5 class="mb-0">
+                          <button style="margin-left:2rem;color: white;width:95%;text-align:left;display:flex;justify-content: space-between;" type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <div  style="color:white;text-decoration: none;">Statement of Profit or Loss</div><div><i style="color:turquoise; " class="fa fa-angle-down"></i>
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="cards-body">
+                          
+                           
+                      
+                        <table class="huge" id="huge" >
+                      
+                        <tr>
+                          <th style="height:70px ;background-color:#32325d ;position: sticky;left:0; border-right-width:3px ;border-right-style:solid; border-right-color:gray"><div style="width:250px; color:turquoise;">FINANCIALS</div></th>
+                         
+                          {% for i in data %}
+                          <th style="background-color: #32325d;color:turquoise"id="heading{{i}}">FY {{i}}</th>
+                          {% endfor %}
+                          
+                        </tr>
+                  
+                        {% for j in rows %}
+                        <tr class={{j}} id={{j}} data-first={{j}}>
+                          <td style="background-color:#e0dcf4;position: sticky;left:0; border-right-width:3px ;border-right-style:solid;border-right-color:grey;"><div class="grid-out-out"> <i class="fa fa-info-circle" aria-hidden="true" data-toggle="modal" data-target="#info" ></i>   {{j}}</div></td>
+                          {% for i in data %}
+                          <td style="background-color:#e0dcf4; margin-right:5px;"><div class="grid-out"><input class="grids" type="number" id={{j}}{{i}} value=0  /></div></td>
+                          {% endfor %}
+    
+                        </tr>
+                        {% endfor %}
+    
+    
+                      </table>
+                        
+                      </div>
+                    </div>
+                    <div style="margin-top:0.5rem;margin-bottom:2rem;" class="cards">
+                      <div  class="cards-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button style="margin-left:2rem;color:white;width:95%;text-align:left;display:flex;justify-content: space-between;" type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div style="color:white;">Sources & Application of Funds</div><div><i style="color:turquoise;" class="fa fa-angle-down"></i>
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="cards-body">
+                          <div>
+                            
+                      
+                        <table class="huge" id="huge-funds" >
+                      
+                        <tr>
+                          <th style="height:70px ;background-color:#32325d ;position: sticky;left:0; border-right-width:3px ;border-right-style:solid; border-right-color:gray;color: turquoise;"><div style="width:250px;">FINANCIALS</div></th>
+                         
+                          {% for i in data %}
+                          <th style="background-color: #32325d;color:turquoise;"id="headings{{i}}">FY {{i}}</th>
+                          {% endfor %}
+                          
+                        </tr>
+                  
+                        {% for j in funds %}
+                        <tr class={{j}} id={{j}} data-first={{j}}>
+                          <td style="background-color:#e0dcf4;position: sticky;left:0; border-right-width:3px ;border-right-style:solid;border-right-color:grey;"><div class="grid-out-out"> <i class="fa fa-info-circle" aria-hidden="true" data-toggle="modal" data-target="#info" ></i>   {{j}}</div></td>
+                          {% for i in data %}
+                          <td style="background-color:#e0dcf4; margin-right:5px;"><div class="grid-out"><input class="grids" type="number" id={{j}}{{i}} value=0  /></div></td>
+                          {% endfor %}
+    
+                        </tr>
+                        {% endfor %}
+    
+    
+                      </table>
+                        </div>
+                      </div>
+                    </div>
+                      
+                      
+              
+                  </div>
+                      
+                  <a class="btnnn" onClick="calculate_valuation()">
+                    Submit
+                    <i class="btn-icon fas fa-check"></i>
+                  </a>
+
+              
+                  <!-- <a  class='btn btnn' onClick="calculate_valuation()">Submit</a>
+                   -->
+                        </div>        
+            
+                 
+                
+              <div class="fieldset_arrows" style="visibility:hidden">
+                <a  class="arrow next action-button ">
+                  <i></i>
+                  <svg>
+                      <use xlink:href="#circle">
+                  </svg>
+                
+              </a>
+              </div>
+              </div>
+              <!-- <div class="footer"> -->
+              <!-- <a  class='btn btnn' onClick="calculate_valuation()">Submit</a>
+              <button type="button" class="next action-button">Continue</button>  -->
+              <!-- </div>                -->
+              <!-- <button type="button" id="result_next" class="next action-button">Continue</button>  -->
+
+              <a  class="arrow left previous action-button-previous position-left-3">
+                <i></i>
+                <svg>
+                    <use xlink:href="#circle">
+                </svg>
+            </a> 
+
+            <a  class="arrow next action-button position-right-3" id="result_next">
+              <i></i>
+              <svg>
+                  <use xlink:href="#circle">
+              </svg>
+            
+          </a>
+              
+                </fieldset>
+                
+      <fieldset >
+        <div class="fieldset_content_result">
+          <div class="result-endboxes">
+            <div>
+              <div class="result_icons">
+              <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h3 class="glow">
+                Pre-Money Equity
+              </h3>
+            
+            
+            <p >
+              <input id="premoney_equity_value" class="center_text" value=0 readonly/></p>
+        
+          </div>
+          <div>
+            <div class="result_icon">
+              <i class="fa-solid fa-angles-down"></i>
+              <!-- <i class="fa-solid fa-angles-right"></i> -->
+                </div>
+          <!-- <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="47"
+                height="23"
+                viewBox="0 0 32 16"
+              >
+                <g fill="none" fill-rule="nonzero">
+                  <path
+                    fill="#28e3ef"
+                    d="M1 15.729h12V7.037l-3.133 4.388-1.973 1.297-1.213.976-2.745.765-1.487.556H1.325z"
+                  ></path>
+                  <path
+                    fill="#000"
+                    d="M1 15.759a.6.6 0 1 1 0-1.2c3.462 0 5.987-1.117 7.91-3.206 1.426-1.55 2.24-3.102 3.599-6.378.355-.85.49-1.166.675-1.572C14.118 1.353 14.95.4 16.282.4c1.639 0 2.27 1.041 3.543 4.578 1.191 3.286 1.925 4.833 3.284 6.381 1.834 2.09 4.345 3.208 7.891 3.208a.6.6 0 1 1 0 1.2c-3.889 0-6.729-1.266-8.792-3.616-1.49-1.698-2.27-3.34-3.511-6.765-1.062-2.949-1.57-3.786-2.415-3.786-.684 0-1.256.655-2.007 2.301-.177.39-.31.699-.659 1.535-1.41 3.402-2.27 5.043-3.824 6.73C7.643 14.501 4.8 15.76 1 15.76z"
+                  ></path>
+                </g>
+              </svg> -->
+              <h3 class="glow" >
+                Low bound
+              </h3>
+            
+            <input id="low_answer" class="center_text" value=0 readonly/>
+          </div>
+          </div>
+          
+              
+       
+            <div class="valuation_result_outter" >
+              <div><h2>Valuation result</h2></div>
+              <div class="range" style="margin:auto;">
+                <input type="range" id="final_answer" name="points" min="0" max="850000" value="10000" class="count">
+                <div class="slice left">
+                  <div class="blocker"></div>
+                </div>
+                <div class="slice right">
+                  <div class="blocker"></div>
+                </div>
+                <span class="info">
+                    <div style="display:flex;justify-content: center;"><h1 style="width:20px;font-size:25px;margin-top:20px;margin-right:0.1rem;">₹</h1><h1 class="count" id="val_res" style="font-size:30px;margin-top:15px;">0</h1></div>
+                    <h6 id="percentage" style="margin-left:1rem;margin-top:0rem;">0</h6>
+                   
+                </span>
+             
+                <div class="dial" id="final_block" tabindex="0"> </div>
+              </div>
+
+             
+              <!-- <div class="valuation_result"> 
+                <div style="height:100px;margin:auto;">
+              <h1 class="glow">Valuation Result</h1>
+             
+              <hr class="hr-line"/>
+          
+              <input id="final_answer"  class="center_text" 
+             value=0 readonly/>
+              </div>
+             </div> -->
+              
+            </div>
+            
+            <div class="result-endboxes">
+            <div>                    
+              <div class="result_icons">
+              <i class="fa-solid fa-chart-pie" ></i>
+              <!-- <i class="fa-solid fa-angles-right"></i> -->
+                </div>
+                <h3 class="glow" >
+                  Equity shares
+                </h3>
+              
+                <p >
+                  <input id="equity_shares" class="center_text" 
+                  value=0 readonly/></p>
+              </div>
+     
+        <div>        
+          <div class="result_icon">
+            <i class="fa-solid fa-angles-up" ></i>
+            <!-- <i class="fa-solid fa-angles-right"></i> -->
+              </div>  
+              
+          
+              <!-- <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="47"
+                height="23"
+                viewBox="0 0 32 16"
+              >
+                <g fill="none" fill-rule="nonzero">
+                  <path
+                    fill="#28e3ef"
+                    d="M31 15.729H19V7.037l3.133 4.388 1.973 1.297 1.213.976 2.745.765 1.487.556h1.124z"
+                  ></path>
+                  <path
+                    fill="#000"
+                    d="M31 15.759a.6.6 0 1 0 0-1.2c-3.462 0-5.987-1.117-7.91-3.206-1.426-1.55-2.24-3.102-3.599-6.378-.355-.85-.49-1.166-.675-1.572C17.882 1.353 17.05.4 15.718.4c-1.639 0-2.27 1.041-3.543 4.578-1.191 3.286-1.925 4.833-3.284 6.381C7.057 13.45 4.546 14.567 1 14.567a.6.6 0 1 0 0 1.2c3.889 0 6.729-1.266 8.792-3.616 1.49-1.698 2.27-3.34 3.511-6.765 1.062-2.949 1.57-3.786 2.415-3.786.684 0 1.256.655 2.007 2.301.177.39.31.699.659 1.535 1.41 3.402 2.27 5.043 3.824 6.73C24.357 14.501 27.2 15.76 31 15.76z"
+                  ></path>
+                </g>
+              </svg> -->
+              <h3 class="glow">
+                High bound
+              </h3>
+            
+            <input id="high_answer" class="center_text" value=0 readonly/>
+             
+            </div>
+      </div>
+      
+  
+  </div>
+                
+                </fieldset>
+
+                </form>
+
+                <a href="https://api.whatsapp.com/send/?phone=917014326179&text=Hello+Team+Frazor"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png"  style="height:80px;width:80px;margin-left:80rem;"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">COE values</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <div>
+          <label for="industry_type">Industry</label>
+          <select   style="overflow: scroll;width:180px;" id="industry_type"
+            name="industry_type" >
+            {% for i in ind %}
+            <option value={{i.id}}>{{i.industry}}</option>
+            {% endfor %}
+            
+            </select>
+          </div>
+          <div>
+            
+            <label for="risk_free_rate">Risk Free Rate (%)</label>
+            <input id="risk_free_rate" type="number" value=6.5 />
+                </div>
+                <div>
+            
+                  <label for="market_premium">Market Premium (%)</label>
+                  <input id="market_premium" type="number" value=7.5 />
+                      </div>
+          
+          <div>
+            
+        <label for="cost_of_debt">Cost of Debt</label>
+        <input id="cost_of_debt" type="number" />
+            </div>
+          <div>
+        
+            
+        <label for="Target_Debt_as_total_capitalisation">Target Debt as total capitalisation</label>
+        <input id="Target_Debt_as_total_capitalisation" type="number" />
+            </div>
+            <div>
+            
+              <label for="no_of_equity_shares">Number of equity shares</label>
+              <input id="no_of_equity_shares" type="number" />
+                  </div>
+                  <div>
+                    <label for="risk_premium">Risk Premium(%)</label>
+                    <input id="risk_premium" type="range" min="0" max="20" value="15"  style="width:150px;"/>
+              <input id="risk_premium_value" value="15" style="width:20px;" />
+                    <!-- <input id="risk_premium" type="number" /> -->
+                        </div>
+                  <div>
+              <label for="growth_rate">Growth Rate</label>
+              <input id="growth_rate" type="range" min="0" max="10" value="5"  style="width:150px;"/>
+              <input id="growth_rate_value" value="5" style="width:20px;" />
+                  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="info" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">INFORMATION</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ipsum accumsan, faucibus massa non, gravida nisl. Integer sollicitudin fringilla placerat. Vestibulum ante lacus, aliquet at lorem quis, viverra sodales urna. Morbi ac sem quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur id quam vestibulum, iaculis mi in, mollis ex. Quisque vestibulum feugiat nisl, ac suscipit lectus condimentum eu. Aliquam in ex feugiat, dictum est ac, commodo massa. Integer lobortis viverra tellus, eu bibendum justo fermentum eu. Nunc vel nunc urna. Nunc est quam, varius et est efficitur, venenatis iaculis nibh.
+      </div>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script
+      type="text/javascript"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    ></script>
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      function send_otp(){
+        if(!document.getElementById('phone').value){
+          alert("enter phone number")
+          return
+        }
+        phone=document.getElementById('phone').value
+   
+       
+        
+        $("#hide").removeClass("hide")
+        $("#hidee").removeClass("hide")
+        // $(".done_text").css("display","block")
+        // $('.no-button').css("display","block")
+        $.ajax({
+          type: "POST",
+          url: "{% url 'getotp' %}",
+          data:{
+            "phone":phone,
+          },
+          success: function (r) {
+            alert(r.generated_otp)
+            document.getElementById('sent_otp').value=r.generated_otp
+            
+            
+            
+          }
+        });
+        
+
+      }
+    </script>
+    <script>
+      $("#confirm_otp").click(function(){
+        if(!document.getElementById('name').value || !document.getElementById('email').value){
+          alert("fill details")
+          return
+        }
+
+        if(phone=document.getElementById('otp').value==document.getElementById('sent_otp').value){
+        
+          $.ajax({
+          type: "POST",
+          url: "{% url 'saveinfo' %}",
+          data:{           
+            "name":document.getElementById('name').value,
+            "email":document.getElementById('email').value,
+             "phone": document.getElementById('phone').value
+          },
+          success:function(response){
+            
+            $("#final_id").val(response.final_id)
+            alert($("#final_id").val())
+
+          }
+         
+        });
+          document.getElementById('next-button').type="button"
+
+
+          
+
+        }
+        else{
+          alert("wrong otp")
+        }
+      })
+    </script>
+  <script>
+    function calculate_valuation(){
+  //     alert("{{provisional_year}}")
+  //     if(!document.getElementById("cost_of_debt").value || !document.getElementById("risk_premium").value || !document.getElementById("Target_Debt_as_total_capitalisation").value || !document.getElementById("growth_rate").value)
+  //   { alert("Fill in the COE")
+  // return}
+      
+      var data=[]
+  
+      y=parseInt(document.getElementById("lastyear").value)
+      x=parseInt(document.getElementById("firstyear").value)
+    
+      for(let k=x;k<y+1;k++){
+        data.push(k-x)
+     
+      }
+      var temporary=[]
+      
+      // var data=[2,3,4,5,6];
+      var prov_rows=["Operating-Revenue","Operating-Expenses","Employee-Benefit","Other-Expenses","DepreciationAmortization","Finance-Cost","Other-Income","Equity","Debt","Other-liabilities","Working-Capital-Asset","Cash-bank-balance"]
+      var rows=["Operating-Revenue","Operating-Expenses","Employee-Benefit","Other-Expenses","DepreciationAmortization","Finance-Cost","Other-Income","Capital-Expenditure"]
+      var funds=["Equity","Debt","Other-liabilities","Tangible-Assets","Investments","Working-Capital-Asset"]
+      var columns = new FormData();
+      
+      for(let j=0;j<rows.length;j++){
+          for (let i = 0; i < data.length; i++){
+            temporary.push($("#"+rows[j]+data[i]).val())
+          }          
+          columns.append(rows[j],temporary)  
+          console.log(temporary)       
+          temporary=[]
+      }
+      for(let j=0;j<funds.length;j++){
+            for (let i = 0; i < data.length; i++){
+              temporary.push($("#"+funds[j]+data[i]).val())
+            }          
+            columns.append(funds[j],temporary)  
+            console.log(temporary)       
+            temporary=[]
+        }
+        
+      for (let k=0;k<prov_rows.length;k++){
+          temporary.push($("#provisional_"+prov_rows[k]).val())
+      }
+      columns.append("provisional_arr",temporary)
+      temporary=[]
+      
+      var coe_data=["risk_premium","cost_of_debt","Target_Debt_as_total_capitalisation","growth_rate","no_of_equity_shares","industry_type","risk_free_rate","market_premium"]
+      for(let m=0;m<coe_data.length;m++){
+        temporary.push($("#"+coe_data[m]).val())
+      }
+      columns.append("coe_rows",temporary)
+      temporary=[]
+      columns.append("provisional_year","{{provisional_year}}")
+      columns.append("provisional_months_left","{{provisional_months_left}}")
+      columns.append("provisional_days_left","{{provisional_days_left}}")
+      columns.append("firstyear",parseInt(x,10))
+      columns.append("final_id",$("#final_id").val())
+      columns.append("Market_value_invetment",$("#Market_value_invetment").val())
+      columns.append("Contigent_liability",$("#Contigent_liability").val())
+
+      
+      
+      columns.append("lastyear",y)
+      for (var pair of columns.entries()) {
+          console.log(pair); 
+       }
+       $.ajax({
+        url:"{% url 'evaluate' %}",
+        type:"POST",
+        enctype: 'multipart/form-data',
+        processData: false,
+        contentType: false,
+        cache: false,
+        data:columns,
+        success:function(response){
+          function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
+          // alert(response.equity_shares)
+        
+          // alert(response.premoney_equity_value)
+     
+         
+          document.getElementById("final_answer").value=response.input_percent.toFixed(2);
+          
+          $("#low_answer").val("₹"+numberWithCommas(response.two_percent.toFixed(0)))
+          $("#val_res").html(numberWithCommas(response.input_percent.toFixed(0)))
+          $("#high_answer").val("₹"+numberWithCommas(response.ten_percent.toFixed(0)))
+          $("#premoney_equity_value").val("₹"+numberWithCommas(response.premoney_equity_value.toFixed(0)))
+          $("#equity_shares").val("₹"+numberWithCommas(response.equity_shares.toFixed(0)))
+          document.getElementById("final_answer").max=response.input_percent.toFixed(0);
+          
+
+
+
+        }
+       })
+
+    }
+  </script>
+
+    
+
+   
+    <script>
+      function addcolumn(){
+        // alert("add")
+        
+        document.getElementById("lastyear").value=parseInt(document.getElementById("lastyear").value)+1
+        document.getElementById("columns").value=parseInt(document.getElementById("columns").value)+1
+        class_number=parseInt(document.getElementById("lastyear").value)-parseInt(document.getElementById("firstyear").value)
+     
+        var lastyear=document.getElementById("lastyear").value
+     $("#huge").find('tr').each(function(){
+       
+         var trow = $(this);
+         console.log(trow.data("first"))
+         if(trow.index() === 0){
+             trow.append('<th style="background-color: #32325d;color:turquoise;" id=heading'+class_number+'>FY '+lastyear+'</th>');
+         }else{
+             trow.append('<td style="background-color:#e0dcf4;"><div class="grid-out"><input class="grids" type="number" id='+trow.data("first")+class_number+' value=0 /></div></td>');
+         }
+     });
+    
+     $("#huge-funds").find('tr').each(function(){
+       
+       var trow = $(this);
+       console.log(trow.data("first"))
+       if(trow.index() === 0){
+           trow.append('<th style="background-color: #32325d;color:turquoise;" id=heading'+class_number+'>FY '+lastyear+'</th>');
+       }else{
+           trow.append('<td style="background-color:#e0dcf4;"><div class="grid-out"><input class="grids" type="number" id='+trow.data("first")+class_number+' value=0 /></div></td>');
+       }
+   });
+  
+      }
+    </script>
+    
+    <script>
+      $('#date').on('input',function(){
+      
+        var provisional_date=document.getElementById('date').value
+        // firstyear=parseInt(document.getElementById('firstyear').value)
+        // lastyear=parseInt(document.getElementById('lastyear').value)
+        // for(let year=firstyear;year<lastyear+1;year++){
+        //   y=year-firstyear
+        //   console.log($('#heading'+y).text())
+        //   $('#heading'+y).text('FY '+year)
+        // } 
+        // $("#trial_table").empty()
+        // var me=document.getElementById("myscript")
+        // console.log(me)
+        // $("#trial_table").text(me)
+        $.ajax({
+          url:"/",
+          type:"POST",
+          data:{
+            "provisional_date":document.getElementById('date').value
+          },
+          success:function(r){
+            document.getElementById('firstyear').value=r.first_year
+            document.getElementById('lastyear').value=r.last_year+parseInt(document.getElementById("columns").value)
+            document.getElementById('provisional_year').value=r.provisional_year
+            document.getElementById('provisional_months_left').valuer=r.provisional_months_left
+            document.getElementById('provisional_days_left').value=r.provisional_days_left  
+            firstyear=parseInt(document.getElementById('firstyear').value)
+        lastyear=parseInt(document.getElementById('lastyear').value)
+        for(let year=firstyear;year<lastyear+1;year++){
+          y=year-firstyear
+          console.log($('#heading'+y).text())
+          $('#heading'+y).text('FY '+year)
+          console.log($('#headings'+y).text())
+          $('#headings'+y).text('FY '+year)
+        } 
+                  }
+        })
+      }) 
+    </script>
+
+<script>
+  $('.arrow').hover(function(e) {
+
+e.preventDefault();
+
+let arrow = $(this);
+
+if(!arrow.hasClass('animate')) {
+    arrow.addClass('animate');
+    setTimeout(() => {
+        arrow.removeClass('animate');
+    }, 1600);
+}
+
+});
+</script>
+<script>
+  (function ($) {
+    "use strict";
+
+    function phoneNoselect() {
+      if ($("#msform").length) {
+        $("#phone").intlTelInput();
+        $("#phone").intlTelInput("setNumber", "+91");
+      }
+    }
+    //* Select js
+    function nice_Select() {
+      if ($(".product_select").length) {
+        $("select").niceSelect();
+      }
+    }
+    /*Function Calls*/
+   /*  verificationForm(); */
+    phoneNoselect();
+    nice_Select();
+  })(jQuery);
+</script>
+<script>
+  // Hold button with mouse / select with tab and hold spacebar
+
+let duration = 0,
+    success = button => {
+        //Success function
+        button.classList.add('success');
+    };
+
+document.querySelectorAll('.button-hold').forEach(button => {
+    button.style.setProperty('--duration', duration + 'ms');
+    ['mousedown', 'touchstart', 'keypress'].forEach(e => {
+        button.addEventListener(e, ev => {
+            if(e != 'keypress' || (e == 'keypress' && ev.which == 32 && !button.classList.contains('process'))) {
+                button.classList.add('process');
+                button.timeout = setTimeout(success, duration, button);
+            }
+        });
+    });
+    ['mouseup', 'mouseout', 'touchend', 'keyup'].forEach(e => {
+        button.addEventListener(e, ev => {
+            if(e != 'keyup' || (e == 'keyup' && ev.which == 32)) {
+                button.classList.remove('process');
+                clearTimeout(button.timeout);
+            }
+        }, false);
+    });
+});
+
+</script>
+<script>
+
+  $("#growth_rate").on('input',function(){
+  
+    $("#growth_rate_value").val($("#growth_rate").val())
+  })
+</script>
+<script>
+
+  $("#risk_premium").on('input',function(){
+  
+    $("#risk_premium_value").val($("#risk_premium").val())
+  })
+</script>
+
+<script>
+  $(function() {
+  var btn = $(".btnn");
+  
+  btn.on("click", function() {
+    
+    $(this).addClass('btnn-progress');
+    setTimeout(function() {
+      btn.addClass('btnn-fill')
+    }, 500);
+    
+    setTimeout(function() {
+      btn.removeClass('btnn-fill')
+    }, 4100);
+    
+    setTimeout(function() {
+      btn.addClass('btnn-complete')
+      $(".position-right-3").css("visibility","visible")
+    }, 4100);
+  
+  });
+});
+</script>
+
+<script>
+  $('#result_next').on('click',function(){
+  var position,
+  lastPosition,
+  canSlide = false,
+  range = $(".range"),
+  input = range.find("input"),
+  maxPoints = input.attr("max"),
+  minPoints = input.attr("min"),
+  prevVal = input.attr("min");
+
+range.on("mousedown touchstart", rangeSliderInit);
+range.on("mousemove touchmove", rangeSliderUpdate);
+range.on("mouseup touchend", rangeSliderStop);
+
+function pointerEvents(e) {
+  var pos = { x: 0, y: 0 };
+
+  if (
+    e.type == "touchstart" ||
+    e.type == "touchmove" ||
+    e.type == "touchend" ||
+    e.type == "touchcancel"
+  ) {
+    var touch = e.changedTouches[0];
+    pos.x = touch.pageX;
+    pos.y = touch.pageY;
+  } else if (
+    e.type == "mousedown" ||
+    e.type == "mouseup" ||
+    e.type == "mousemove" ||
+    e.type == "mouseover" ||
+    e.type == "mouseout" ||
+    e.type == "mouseenter" ||
+    e.type == "mouseleave"
+  ) {
+    pos.x = e.pageX;
+    pos.y = e.pageY;
+  }
+
+  return pos;
+}
+
+function rangeSliderInit() {
+  canSlide = true;
+}
+
+function rangeSliderUpdate(e) {
+  if (!canSlide || maxPoints == 0) return;
+
+  var position = pointerEvents(e),
+    dial = range.find(".dial"),
+    dialRadius = dial.width() / 2,
+    coords = {
+      x: position.x - range.offset().left,
+      y: position.y - range.offset().top
+    },
+    radius = range.width() / 2,
+    atan = Math.atan2(coords.x - radius, coords.y - radius),
+    deg = Math.ceil(-atan / (Math.PI / 180) + 180);
+
+  if (prevVal <= 1 && lastPosition - position.x >= 0) deg = 0;
+  if (prevVal >= 359 && lastPosition - position.x <= 0) deg = 360;
+
+  var x =
+    Math.ceil((radius - 5) * Math.sin(deg * Math.PI / 180)) + radius + "px",
+    y =
+      Math.ceil((radius - 5) * -Math.cos(deg * Math.PI / 180)) + radius + "px",
+    points = Math.ceil(deg * maxPoints / 360);
+    var parts = points.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var temp=points
+    points=parts.join(".")
+  //move dial
+  dial.css({ transform: "translate(" + x + "," + y + ")" });
+  var mm=parseInt(document.getElementById("final_answer").max)
+  // var temp=parseInt($("#val_res").html())
+
+  $("#percentage").html((temp*100/mm).toFixed(2)+"%")
+  //show range progress
+  if (deg <= 180) {
+    range.find(".right .blocker").css({ transform: "rotate(" + deg + "deg)" });
+    range.find(".left .blocker").css({ transform: "rotate(0)" });
+  } else {
+    range.find(".right .blocker").css({ transform: "rotate(180deg" });
+    range
+      .find(".left .blocker")
+      .css({ transform: "rotate(" + (deg - 180) + "deg)" });
+  }
+
+  //show value
+  range.find(".count").text(points).val(points);
+
+  prevVal = deg;
+  lastPosition = position.x;
+}
+
+function rangeSliderStop() {
+  canSlide = false;
+}
+  })
+</script>
+
+<script>
+  const btn = document.querySelector('.btnnn')
+const reset = document.querySelector('.reset')
+let isLoading = false
+let timer
+
+btn
+  .addEventListener('click', function() {
+  if(isLoading) return
+  
+  isLoading = true;
+  
+  btn
+    .classList
+    .add('is-loading')
+  
+  timer = setTimeout(() => {
+    reset
+      .classList.add('is-active')
+  }, 1200)
+}, false)
+
+reset.addEventListener('click', function(e) {
+  e.preventDefault()
+  isLoading = false
+  
+  clearTimeout(timer)
+  
+  reset.blur()
+  
+  reset
+    .classList
+    .remove('is-active')
+    
+  btn
+    .classList
+    .remove('is-loading')
+}, false)
+</script>
+<!-- <script>
+  $("#final_block").hover(function(){
+    // alert("tygjh")
+    var a=$("#val_res").html()
+  // alert(a)
+  $("#percentage").html(a)
+  })
+ 
+</script> -->
+  </body>
+</html>

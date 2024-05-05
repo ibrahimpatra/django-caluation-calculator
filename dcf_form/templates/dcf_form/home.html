@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Sync is a landing page HTML template built with Bootstrap 4 for presenting mobile apps to the online audience and for getting visitors to become users.">
+    <meta name="author" content="Inovatik">
+
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Webpage Title -->
+    <title>DCF VALUATION</title>
+    {% load static %}
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'frontpage/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'frontpage/fontawesome-all.css' %}" />
+    <link rel="stylesheet" href="{% static 'frontpage/swiper.css' %}" />
+    <link rel="stylesheet" href="{% static 'frontpage/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'frontpage/styles.css' %}" />
+    <!-- <link href="frontpage/fontawesome-all.css" rel="stylesheet"> -->
+    <!-- <link href="frontpage/swiper.css" rel="stylesheet"> -->
+    <!-- <link href="frontpage/magnific-popup.css" rel="stylesheet"> -->
+    <!-- <link href="frontpage/styles.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="./frontpage/base.css"> -->
+    <link rel="stylesheet" href="{% static 'frontpage/base.css' %}" />
+
+    <!-- Favicon  -->
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <a href="#" class="navbar-brand">DCF VALUATION</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#description">EXPLORE <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#features">SUPPORT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#screens">PRICING</a>
+                    </li>
+
+                </ul>
+                <!-- <span class="nav-item">
+                    <a class="btn-outline-sm page-scroll btn-log-in" href="#login">LOG IN</a>
+                </span> -->
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="heading-2">UNTANGLE YOUR STARTUP VALUATION</h2>
+                                <p class="p-large p-heading">Our platform seamlessly guides you towards understanding
+                                    how valuable your company is</p>
+                                <a class="btn-solid-lg" href="{% url 'valuate' %}">LIVE DEMO</a>
+                                <a class="btn-solid-lg" href="#your-link">BUY NOW</a>
+                            </div>
+                            <div class="col">
+                              
+                                <img src="{% static 'frontpage/new_images/home-animation.gif' %}" alt="">
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end of container -->
+        <div class="deco-white-circle-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-white-circle-1 -->
+        <div class="deco-white-circle-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-white-circle-2 -->
+        <div class="deco-blue-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-blue-circle -->
+        <div class="deco-yellow-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              </svg>
+        </div> <!-- end of deco-yellow-circle -->
+        <div class="deco-green-diamond">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-diamond-fill" viewBox="0 0 16 16">
+                <path d="M2.45 7.4 7.2 1.067a1 1 0 0 1 1.6 0L13.55 7.4a1 1 0 0 1 0 1.2L8.8 14.933a1 1 0 0 1-1.6 0L2.45 8.6a1 1 0 0 1 0-1.2z"/>
+              </svg>
+        </div> <!-- end of deco-yellow-circle -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <div class="tabs">
+        <div class="container">
+            <div class="what-we-do-div-1">
+                <h5>WELCOME TO DCF VALUATION</h5>
+                <h3>What we do?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Small Features -->
+    <div class="cards-1">
+        <div class="container small-features-container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Identify Goals</h5>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image green">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Situation Analysis</h5>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image red">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Tasks Settings</h5>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image yellow">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Social Interaction</h5>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image blue">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Get Things Done</h5>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of small features -->
+
+
+    <!-- Description 1 -->
+    <div id="description" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <!-- <img class="img-fluid img-1" src="new_images/interface-3614766.png" alt="alternative"> -->
+                        <img src="{% static 'frontpage/new_images/interface-3614766.png' %}" alt="">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Organize Your Time And Start Getting Results</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+                            </li>
+                        </ul>
+                        <!-- <a class="btn-solid-reg popup-with-move-anim"
+                            href="#description-1-details-lightbox">LIGHTBOX</a> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of description 1 -->
+
+
+    <!-- Description 1 Details Lightbox -->
+    <!-- Details Lightbox -->
+    <div id="description-1-details-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <div class="image-container">
+                    <!-- <img class="img-fluid" src="images/description-1-details-lightbox.jpg" alt="alternative"> -->
+                    <img src="{% static 'frontpage/images/description-1-details-lightbox.jpg' %}" alt="">
+                    
+                </div> <!-- end of image-container -->
+            </div>
+            <div class="col-lg-4">
+                <h3>Goals Setting</h3>
+                <hr>
+                <p>The app can easily help you track your personal development evolution if you take the time to set it
+                    up.</p>
+                <h4>User Feedback</h4>
+                <p>This is a great app which can help you save time and make your live easier. And it will help improve
+                    your productivity.</p>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="far fa-check-square"></i>
+                        <div class="media-body">Splash screen panel</div>
+                    </li>
+                    <li class="media">
+                        <i class="far fa-check-square"></i>
+                        <div class="media-body">Statistics graph report</div>
+                    </li>
+                    <li class="media">
+                        <i class="far fa-check-square"></i>
+                        <div class="media-body">Events calendar layout</div>
+                    </li>
+                    <li class="media">
+                        <i class="far fa-check-square"></i>
+                        <div class="media-body">Location details screen</div>
+                    </li>
+                    <li class="media">
+                        <i class="far fa-check-square"></i>
+                        <div class="media-body">Onboarding steps interface</div>
+                    </li>
+                </ul>
+                <a class="btn-solid-reg mfp-close page-scroll" href="#download">DOWNLOAD</a> <button
+                    class="btn-outline-reg mfp-close as-button" type="button">BACK</button>
+            </div>
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of details lightbox -->
+    <!-- end of description 1 details lightbox -->
+
+
+
+    <!-- Description 2 -->
+    <div class="tabs">
+        <div class="container schedule-call">
+            <h1>Valuations made easy</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="tabs-container">
+
+                        <!-- Tabs Links -->
+                        <ul class="nav nav-tabs" id="cedoTabs" role="tablist">
+                            <li class="nav-item">
+                               <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" class="nav-link active" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shubh28062000'});return false;"><i class="far fa-clock"></i> Schedule a free call with Us</a>
+<!-- Calendly link widget end -->
+                                <!-- <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab"
+                                    aria-controls="tab-1" aria-selected="true">Schedule</a> -->
+                            </li>
+                             <!-- <li class="nav-item">
+                                <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#" role="tab"
+                                    aria-controls="tab-2" aria-selected="false"><i class="fas fa-list"></i>Learn More</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#" role="tab"
+                                    aria-controls="tab-3" aria-selected="false">Learn More</a>
+                            </li>
+                        </ul>
+                        <!-- end of tabs links -->
+
+                        <!-- Tabs Content -->
+                        <div class="tab-content" id="cedoTabsContent">
+                            <!-- Tab -->
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                <ul class="list-unstyled li-space-lg">
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</div>
+                                    </li>
+                                </ul>
+                                <a class="btn-solid-reg page-scroll" href="#">TERMS</a> <a
+                                    class="btn-outline-reg page-scroll" href="#">PRIVACY</a>
+                            </div> <!-- end of tab-pane -->
+                            <!-- end of tab -->
+
+                            <!-- Tab -->
+                            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                                <p><strong>Keep track of everything</strong> and analyse your progress while using the
+                                    app. In less than a month you should be seeing improved results when it comes to
+                                    time management and task prioritization</p>
+                                <p><strong>Anyone can enjoy the app</strong> no matter their gender, age, occupation or
+                                    location in the world. Sync's algorithms have been built to be flexible and
+                                    functional for any person in the world</p>
+                                <p><strong>Achieve the impossible</strong> just by carefully monitoring your progress
+                                    and keeping the app updated with daily operations. It's easier than you think and it
+                                    only takes a couple of minutes</p>
+                                <a class="red" href="#">Terms & Conditions >></a>
+                            </div> <!-- end of tab-pane -->
+                            <!-- end of tab -->
+
+                            <!-- Tab -->
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                                <p><strong>Use the power of social interactivity</strong> to keep you motivated and
+                                    focused on your daily and long term goals. It's revolutionary</p>
+                                <ul class="list-unstyled li-space-lg">
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">Commiting to something in front of a crowd gives you
+                                            little room to walk back on your promise and makes you push on</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">No more frustrations of loosing focus and not being
+                                            efficient. Sync main purpose is to solve just that and make you happy</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">It's the first mobile app that can turn you in a better
+                                            organized person without the pressure of failing like other systems</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="far fa-check-square"></i>
+                                        <div class="media-body">Recognized by a lot of trainers and life coaches Sync is
+                                            the number one tool they recommend time management</div>
+                                    </li>
+                                </ul>
+                            </div> <!-- end of tab-pane -->
+                            <!-- end of tab -->
+                        </div> <!-- end of tab-content -->
+                        <!-- end of nav tabs content -->
+
+                    </div> <!-- end of tabs-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <!-- <img class="img-fluid schedule-appointment-img" src="new_images/schedule-appointment.gif" alt="alternative"> -->
+                        <img src="{% static 'frontpage/new_images/schedule-appointment.gif' %}" alt="">
+                    </div>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of description 2 -->
+
+
+    <!-- Features -->
+    <div id="features" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Why you should choose us</h2>
+                    <p class="p-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- end of div -->
+            </div> <!-- end of div -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <ul class="list-unstyled li-space-lg first">
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-users fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Goal Setting</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x green"></i>
+                                <i class="fas fa-code fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Situation Analysis</h4>
+                                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x red"></i>
+                                <i class="fas fa-cog fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Tasks Settings</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <!-- <img class="img-fluid" src="images/features-app.jpg" alt="alternative"> -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x yellow"></i>
+                                <i class="fas fa-comments fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Social Interaction</h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x blue"></i>
+                                <i class="fas fa-rocket fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Get Things Done</h4>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                                </p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-download fa-stack-1x"></i>
+                            </span>
+                            <div class="media-body">
+                                <h4>Good Foundation</h4>
+                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of features -->
+
+
+
+
+
+    <!-- Testimonials -->
+    <div class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>User Testimonials</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Rick Jones - Designer</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Lynda Marquez - Developer</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Jay Frisco - Marketer</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="image-container">
+                        <!-- <img class="img-fluid" src="images/customer-logo-1.png" alt="alternative">
+                        <img class="img-fluid" src="images/customer-logo-2.png" alt="alternative">
+                        <img class="img-fluid" src="images/customer-logo-3.png" alt="alternative">
+                        <img class="img-fluid" src="images/customer-logo-4.png" alt="alternative">
+                        <img class="img-fluid" src="images/customer-logo-5.png" alt="alternative"> -->
+                        <img src="{% static 'frontpage/images/customer-logo-1.png' %}" alt="">
+                        <img src="{% static 'frontpage/images/customer-logo-2.png' %}" alt="">
+                        <img src="{% static 'frontpage/images/customer-logo-4.png' %}" alt="">
+                        <img src="{% static 'frontpage/images/customer-logo-5.png' %}" alt="">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Frank Gibson - Manager</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Rita Longmile - Designer</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <hr class="testimonial-line">
+                        </div>
+                        <div class="card-body">
+                            <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="testimonial-author">Jones Smith - Developer</div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of testimonials -->
+
+
+    <!-- Statistics -->
+    <div class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Counter -->
+                    <div id="counter">
+                        <div class="cell">
+                            <i class="fas fa-users"></i>
+                            <div class="counter-value number-count" data-count="231">1</div>
+                            <p class="counter-info">Happy Users</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-code green"></i>
+                            <div class="counter-value number-count" data-count="385">1</div>
+                            <p class="counter-info">Issues Solved</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-cog red"></i>
+                            <div class="counter-value number-count" data-count="159">1</div>
+                            <p class="counter-info">Good Reviews</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-comments yellow"></i>
+                            <div class="counter-value number-count" data-count="127">1</div>
+                            <p class="counter-info">Case Studies</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-rocket blue"></i>
+                            <div class="counter-value number-count" data-count="211">1</div>
+                            <p class="counter-info">Orders Received</p>
+                        </div>
+                    </div>
+                    <!-- end of counter -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of statistics -->
+
+
+    <!-- Download -->
+    <div id="download" class="basic-3">
+        <div class="container">
+            <h2>Get started now!</h2>
+                <div class="quote-block">
+                    <h3><i class="fas fa-quote-left fa-xs"></i> Never take your eyes of the cash flow because it's the life blood of business <i class="fas fa-quote-right fa-xs"></i></h3>
+                    <h4>- Richard Branson</h4>
+                </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="image-container">
+                        <img class="img-fluid" src="new_images/istockphoto-1310373583-612x612.jpg" alt="alternative">
+                    </div> -->
+
+                    <p class="p-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <a class="btn-solid-lg" href="#your-link">Live Demo</a>
+                    <a class="btn-solid-lg" href="#your-link">Buy Now</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <div class="deco-white-circle-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-white-circle-1 -->
+        <div class="deco-white-circle-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-white-circle-2 -->
+        <div class="deco-blue-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+              </svg>
+        </div> <!-- end of deco-blue-circle -->
+        <div class="deco-yellow-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              </svg>
+        </div> <!-- end of deco-yellow-circle -->
+        <div class="deco-green-diamond">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-diamond-fill" viewBox="0 0 16 16">
+                <path d="M2.45 7.4 7.2 1.067a1 1 0 0 1 1.6 0L13.55 7.4a1 1 0 0 1 0 1.2L8.8 14.933a1 1 0 0 1-1.6 0L2.45 8.6a1 1 0 0 1 0-1.2z"/>
+              </svg>
+        </div> <!-- end of deco-yellow-circle -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of download -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h5>About DCF Valuation</h5>
+                        <p class="p-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col second">
+                        <h5>Contact Info</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="media-body">15 Vasant Vihar, Delhi, India</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-envelope"></i>
+                                <div class="media-body"><a href="#your-link">office@dcfvaluation.com</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="media-body"><a href="#your-link">+91 9999 999 999</a></div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <h5>Value Links</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Article Details</a></li>
+                        </ul>
+                    </div> <!-- end of footer-col -->
+                    <!-- <div class="footer-col fourth">
+                        <h5>Other Apps</h5>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li><a href="#your-link">Scientific Calculator</a></li>
+                            <li><a href="#your-link">Advanced Timer</a></li>
+                            <li><a href="#your-link">Music Store</a></li>
+                        </ul>
+                    </div>  -->
+                    <div class="footer-col fifth">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of footer-col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2022 <a href="#">DCF Valuation</a> - All rights
+                        reserved</p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+
+    <!-- <script src="{% static 'frontpage/base.js' %}"></script> -->
+    <script src="{% static 'frontpage/js/jquery.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/popper.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/swiper.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/validator.min.js' %}"></script>
+    <script src="{% static 'frontpage/js/scripts.js' %}"></script>
+    <script src="{% static 'frontpage/js/jquery.magnific-popup.js' %}"></script>
+</body>
+
+</html>
